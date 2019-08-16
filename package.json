@@ -1,8 +1,8 @@
 {
   "name": "feedreader-app",
   "version": "1.0.0",
-  "description": "",
-  "main": "",
+  "description": "Udacity FEND Feed reader testing",
+  "main": "app.js",
   "scripts": {
     "development": "cross-env NODE_ENV=development gulp",
     "dist": "cross-env NODE_ENV=production gulp dist",
@@ -29,5 +29,18 @@
     "gulp-terser": "^1.2.0",
     "gulp-watch": "^5.0.1"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "keywords": [
+    "Udacity",
+    "FEND",
+    "JavaScript",
+    "jQuery",
+    "Jasmine",
+    "Gulp",
+    "project",
+    "Feed",
+    "Reader",
+    "Testing",
+    "Handlebarsjs"
+  ]
 }
