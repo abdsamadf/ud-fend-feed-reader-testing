@@ -14,9 +14,6 @@ const autoprefixer = require('autoprefixer');
 const babel = require('gulp-babel');
 const concat = require('gulp-concat');
 const terser = require('gulp-terser');
-// image optimization
-const imagemin = require('gulp-imagemin');
-const pngquant = require('imagemin-pngquant');
 
 /**
  * @function watchTestFiles
@@ -61,22 +58,6 @@ function copyFont(done) {
 function copyHTML(done) {
     gulp.src('./index.html').pipe(gulp.dest('./dist'));
     done();
-}
-
-/**
- * @function copyImages
- * @description load images, minified it for development production and pipe to dest folder
- */
-function copyImages() {
-    return gulp
-        .src('img/*')
-        .pipe(
-            imagemin({
-                progressive: true,
-                use: [pngquant()],
-            })
-        )
-        .pipe(gulp.dest('./dist/img'));
 }
 
 /**
@@ -184,14 +165,13 @@ exports.tests = tests;
 exports.copyFont = copyFont;
 exports.copyTests = copyTests;
 exports.copyHTML = copyHTML;
-exports.copyImages = copyImages;
 exports.scripts = scripts;
 exports.distScripts = distScripts;
 exports.distStyles = distStyles;
 
 // For development
-exports.default = gulp.series(copyFont, copyHTML, copyImages, styles, scripts, copyTests, watchFiles);
+exports.default = gulp.series(copyFont, copyHTML, styles, scripts, copyTests, watchFiles);
 // for unit testing
 exports.unitTest = gulp.series(watchTestFiles);
 // For production
-exports.dist = gulp.series(copyFont, copyHTML, copyImages, distStyles, copyTests, distScripts);
+exports.dist = gulp.series(copyFont, copyHTML, distStyles, copyTests, distScripts);
