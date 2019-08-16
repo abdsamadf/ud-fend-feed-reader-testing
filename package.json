@@ -1,0 +1,30 @@
+{
+  "name": "feedreader-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Abdul Samad",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "autoprefixer": "^9.6.1",
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-imagemin": "^6.0.0",
+    "gulp-jasmine": "^4.0.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-terser": "^1.2.0",
+    "gulp-watch": "^5.0.1",
+    "imagemin-pngquant": "^8.0.0",
+    "jasmine-core": "^3.4.0"
+  },
+  "dependencies": {}
+}
