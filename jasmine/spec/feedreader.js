@@ -50,7 +50,7 @@ $(function() {
             bodyElement = $('body')[0];
         });
 
-        /* validates body tag has the class by default */
+        /* A test that ensures the menu element is hidden by default. */
         it('hidden by default', function () {
             expect(bodyElement).toHaveClass('menu-hidden');
         });
