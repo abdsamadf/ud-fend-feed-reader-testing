@@ -24,7 +24,7 @@ This project is from my Front-End Web Developer Nanodegree Program at Udacity. T
   - [Contributing](#contributing)
 
 ## Get Started
-Click on this [link]() to see the website or you can download or clone the project, and loading up the index.html file in your browser.
+Click on this [link](https://abdsamadf.github.io/ud-fend-feed-reader-testing) to see the website or you can download or clone the project, and loading up the index.html file in your browser.
 
 ##  Motivation
 Testing is an essential part of the development process and many organizations practice a standard of development known as "test-driven development". This is when developers write tests first before they ever start developing their application. All the tests initially fail, and then they start writing application code to make these tests pass.
@@ -112,4 +112,3 @@ Please note that this project is released with a [Contributor Code of Conduct](c
 [![MIT license](https://img.shields.io/github/license/abdsamadf/ud-fend-feed-reader-testing?style=for-the-badge)](http://opensource.org/licenses/MIT)
 
 [MIT](https://github.com/abdsamadf/ud-fend-feed-reader-testing/blob/master/LICENSE) :copyright: [Abdul Samad](https://github.com/abdsamadf)
-
