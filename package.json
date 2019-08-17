@@ -31,10 +31,12 @@
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^6.0.0",
     "gulp-jasmine": "^4.0.0",
     "gulp-postcss": "^8.0.0",
     "gulp-sourcemaps": "^2.6.5",
-    "gulp-terser": "^1.2.0"
+    "gulp-terser": "^1.2.0",
+    "imagemin-pngquant": "^8.0.0"
   },
   "dependencies": {},
   "keywords": [

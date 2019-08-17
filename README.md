@@ -17,6 +17,7 @@ This project is from my Front-End Web Developer Nanodegree Program at Udacity. T
     - [Live Editing](#live-editing)
     - [CSS Optimization](#css-optimization)
     - [Javascript Optimization](#javascript-optimization)
+    - [Image Optimization](#image-optimization)
     - [Unit Testing](#unit-testing)
   - [Contributing](#contributing)
 
@@ -90,6 +91,10 @@ Good tests give you the ability to quickly analyze whether new code breaks an ex
 * [gulp-babel](https://www.npmjs.com/package/gulp-babel)
 * [gulp-concat](https://www.npmjs.com/package/gulp-concat)
 * [gulp-terser](https://www.npmjs.com/package/gulp-terser)
+
+### Image Optimization
+* [gulp-imagemin](https://www.npmjs.com/package/gulp-imagemin)
+* [imagemin-pngquant](https://www.npmjs.com/package/imagemin-pngquant)
 
 ### Unit Testing
 * [Jasmine](https://jasmine.github.io/index.html)
