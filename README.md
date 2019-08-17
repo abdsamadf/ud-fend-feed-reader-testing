@@ -107,3 +107,9 @@ Good tests give you the ability to quickly analyze whether new code breaks an ex
 Contributions are always welcome! Please read the [contribution guidelines](CONTRIBUTING.md) first.
 
 Please note that this project is released with a [Contributor Code of Conduct](code-of-conduct.md). By participating in this project you agree to abide by its terms.
+
+## LICENSE
+[![MIT license](https://img.shields.io/github/license/abdsamadf/ud-fend-feed-reader-testing?style=for-the-badge)](http://opensource.org/licenses/MIT)
+
+[MIT](https://github.com/abdsamadf/ud-fend-feed-reader-testing/blob/master/LICENSE) :copyright: Abdul Samad
+
