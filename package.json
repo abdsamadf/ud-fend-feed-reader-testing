@@ -21,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/abdsamadf/ud-fend-feed-reader-testing/issues"
   },
-  "homepage": "https://abdsamadf.github.io/feed-reader-testing",
+  "homepage": "https://abdsamadf.github.io/ud-fend-feed-reader-testing",
   "readmeFilename": "README.markdown",
   "devDependencies": {
     "@babel/core": "^7.5.5",
