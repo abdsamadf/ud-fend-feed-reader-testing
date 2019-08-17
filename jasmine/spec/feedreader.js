@@ -47,12 +47,12 @@ $(function() {
         var bodyElement;
 
         beforeEach(function () {
-            bodyElement = $('body')[0];
+            bodyElement = $('body');
         });
 
         /* A test that ensures the menu element is hidden by default. */
         it('hidden by default', function () {
-            expect(bodyElement).toHaveClass('menu-hidden');
+            expect(bodyElement.hasClass('menu-hidden')).toBe(true);
         });
 
         /* ensures the menu changes visibility when the menu icon is clicked.
@@ -63,10 +63,10 @@ $(function() {
             var menuIcon = $('.menu-icon-link');
 
             menuIcon.trigger('click');
-            expect(bodyElement).not.toHaveClass('menu-hidden');
+            expect(bodyElement.hasClass('menu-hidden')).toBe(false);
 
             menuIcon.trigger('click');
-            expect(bodyElement).toHaveClass('menu-hidden');
+            expect(bodyElement.hasClass('menu-hidden')).toBe(true);
         });
     });
 
@@ -84,7 +84,7 @@ $(function() {
          * Jasmine's beforeEach and asynchronous done() function.
          */
         it('at least a single entry in a feed', function (done) {
-            var entriesLen = $('.feed').children().length;
+            var entriesLen = $('.feed .entry').length;
             expect(entriesLen).toBeGreaterThan(0);
             done();
         });
@@ -92,32 +92,28 @@ $(function() {
 
 
     describe('New Feed Selection', function () {
-        var oldFeed,
-            newFeed;
+        var feedAfterFirstLoad,
+            feedAfterSecondLoad;
 
         beforeEach(function (done) {
             loadFeed(0, function () {
-                // store old feed
-                oldFeed = $('.feed').html();
-                done();
-            })
-        })
-
-        beforeEach(function (done) {
-            loadFeed(1, function () {
-                // fetch new feed
-                newFeed = $('.feed').html();
-                done();
+                // get content of feed container
+                feedAfterFirstLoad = $('.feed').html();
+                loadFeed(1, function () {
+                    // get content of new feed container
+                    feedAfterSecondLoad = $('.feed').html();
+                    done();
+                })
             })
         })
 
         /* ensures when a new feed is loaded by the loadFeed
          * function that the content actually changes.
          * loadFeed() is asynchronous. Load two different RSS feeds
-         * and comparing their content.
+         * and comparing their feed container content.
          */
         it('that new feed is loaded', function (done) {
-            expect(newFeed).not.toEqual(oldFeed);
+            expect(feedAfterFirstLoad).not.toEqual(feedAfterSecondLoad);
             done();
         })
     });
