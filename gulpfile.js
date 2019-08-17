@@ -1,6 +1,5 @@
 /* eslint-env node */
 const gulp = require('gulp');
-// const watch = require('gulp-watch');
 const sourcemaps = require('gulp-sourcemaps');
 // unit testing
 const jasmine = require('gulp-jasmine');
