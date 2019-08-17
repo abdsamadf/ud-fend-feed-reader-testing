@@ -1,4 +1,6 @@
-# Udacity FEND Feed Reader Testing
+# Udacity FEND Feed Reader Testing :full_moon_with_face:
+
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
 
 This project is from my Front-End Web Developer Nanodegree Program at Udacity. This project based on the concept of "test-driven development". Using the starter code given by Udacity, I tried to create a series of test suites for the Feed-reader application.
 
@@ -66,7 +68,7 @@ Good tests give you the ability to quickly analyze whether new code breaks an ex
 ## Technology Used
 * HTML5 and CSS3
 * Vanilla JS
-* [jQuery](https://jquery.com) - jQuery is a JavaScript library designed to simplify HTML DOM tree traversal and manipulation, as well as event handling, CSS animation, and Ajax.
+* jQuery - [jQuery](https://jquery.com) is a JavaScript library designed to simplify HTML DOM tree traversal and manipulation, as well as event handling, CSS animation, and Ajax.
 * Jasmine - [Jasmine](https://jasmine.github.io) is a Behavior Driven Development testing framework for JavaScript. It does not rely on browsers, DOM, or any JavaScript framework. Thus it's suited for websites, Node.js projects, or anywhere that JavaScript can run.
 * Handlebars.js - [Handlebars](https://handlebarsjs.com) provides the power necessary to let you build semantic templates effectively with no frustration.
 
