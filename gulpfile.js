@@ -1,5 +1,5 @@
 /* eslint-env node */
-const gulp = require('gulp');
+const {src, dest, series, parallel, watch} = require('gulp');
 const sourcemaps = require('gulp-sourcemaps');
 // unit testing
 const jasmine = require('gulp-jasmine');
@@ -23,7 +23,7 @@ function watchTestFiles() {
         server: './',
     });
 
-    gulp.watch(['js/app.js', 'jasmine/spec/feedreader.js']).on('change', browserSync.reload);
+    watch(['js/app.js', 'jasmine/spec/feedreader.js']).on('change', browserSync.reload);
 }
 
 /**
@@ -35,10 +35,10 @@ function watchFiles() {
         server: './',
     });
     // Update the "default" Task, calling .init on browserSync starts the server.
-    gulp.watch('css/**/*.css', gulp.series('styles'));
-    gulp.watch('js/**/*.js', gulp.series('scripts'));
-    gulp.watch('index.html', gulp.series('copyHTML'));
-    gulp.watch('./dist/index.html').on('change', browserSync.reload);
+    watch('css/**/*.css', series('styles'));
+    watch('js/**/*.js', series('scripts'));
+    watch('index.html', series('copyHTML'));
+    watch('./dist/index.html').on('change', browserSync.reload);
 }
 
 /**
@@ -46,7 +46,7 @@ function watchFiles() {
  * @description load font files and pipe to dest folder
  */
 function copyFont(done) {
-    gulp.src('fonts/*').pipe(gulp.dest('./dist/fonts'));
+    src('fonts/*').pipe(dest('./dist/fonts'));
     done();
 }
 
@@ -55,7 +55,7 @@ function copyFont(done) {
  * @description load html files and pipe to dest folder
  */
 function copyHTML(done) {
-    gulp.src('./index.html').pipe(gulp.dest('./dist'));
+    src('./index.html').pipe(dest('./dist'));
     done();
 }
 
@@ -64,7 +64,7 @@ function copyHTML(done) {
  * @description load js files and concat it for development and pipe to dest folder
  */
 function scripts(done) {
-    gulp.src(['js/**/*.js'])
+    src(['js/**/*.js'])
         .pipe(sourcemaps.init())
         .pipe(
             babel({
@@ -73,7 +73,7 @@ function scripts(done) {
         )
         .pipe(concat('app.js'))
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest('dist/js'))
+        .pipe(dest('dist/js'))
         .pipe(browserSync.stream());
     done();
 }
@@ -83,7 +83,7 @@ function scripts(done) {
  * @description load js files, concat, minified it for production and pipe to dest folder
  */
 function distScripts(done) {
-    gulp.src('js/**/*.js')
+    src('js/**/*.js')
         .pipe(sourcemaps.init())
         .pipe(
             babel({
@@ -93,7 +93,7 @@ function distScripts(done) {
         .pipe(concat('app.js'))
         .pipe(terser())
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest('dist/js'));
+        .pipe(dest('dist/js'));
     done();
 }
 
@@ -107,12 +107,11 @@ function styles() {
             overrideBrowserslist: ['last 2 versions'],
         })
     ];
-    return gulp
-        .src('css/**/*.css')
+    return src('css/**/*.css')
         .pipe(sourcemaps.init())
         .pipe(postcss(processors))
         .pipe(sourcemaps.init())
-        .pipe(gulp.dest('dist/css'))
+        .pipe(dest('dist/css'))
         .pipe(browserSync.stream()); // Update the "styles" Function
 }
 
@@ -127,12 +126,11 @@ function distStyles() {
         }),
         cssnano
     ];
-    return gulp
-        .src('css/**/*.css')
+    return src('css/**/*.css')
         .pipe(sourcemaps.init())
         .pipe(postcss(processors))
         .pipe(sourcemaps.init())
-        .pipe(gulp.dest('dist/css'))
+        .pipe(dest('dist/css'))
         .pipe(browserSync.stream()); // Update the "styles" Function
 }
 
@@ -144,7 +142,7 @@ function tests() {
     var filesForTest = ['js/app.js', 'jasmine/spec/feedreader.js'];
     return gulp
         .src(filesForTest)
-        .pipe(gulp.watch(filesForTest))
+        .pipe(watch(filesForTest))
         .pipe(jasmine())
 }
 
@@ -154,8 +152,8 @@ function tests() {
  */
 
 function copyTests(done) {
-    gulp.src(['jasmine/**/*.js'])
-        .pipe(gulp.dest('dist/jasmine'));
+    src(['jasmine/**/*.js'])
+        .pipe(dest('dist/jasmine'));
     done();
 }
 
@@ -169,8 +167,8 @@ exports.distScripts = distScripts;
 exports.distStyles = distStyles;
 
 // For development
-exports.default = gulp.series(copyFont, copyHTML, styles, scripts, copyTests, watchFiles);
+exports.default = series(copyFont, copyHTML, styles, scripts, copyTests, watchFiles);
 // for unit testing
-exports.unitTest = gulp.series(watchTestFiles);
+exports.unitTest = series(watchTestFiles);
 // For production
-exports.dist = gulp.series(copyFont, copyHTML, distStyles, copyTests, distScripts);
+exports.dist = series(copyFont, copyHTML, distStyles, copyTests, distScripts);
