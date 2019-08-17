@@ -18,6 +18,7 @@ This project is from my Front-End Web Developer Nanodegree Program at Udacity. T
     - [CSS Optimization](#css-optimization)
     - [Javascript Optimization](#javascript-optimization)
     - [Unit Testing](#unit-testing)
+  - [Contributing](#contributing)
 
 ## Get Started
 Click on this [link]() to see the website or you can download or clone the project, and loading up the index.html file in your browser.
@@ -94,3 +95,6 @@ Good tests give you the ability to quickly analyze whether new code breaks an ex
 ### Unit Testing
 * [Jasmine](https://jasmine.github.io/index.html)
 * [gulp-jasmine](https://www.npmjs.com/package/gulp-jasmine)
+
+## Contributing
+Contributions are always welcome! Please read the [contribution guidelines](CONTRIBUTING.md) first.
