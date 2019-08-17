@@ -84,7 +84,7 @@ $(function() {
          * Jasmine's beforeEach and asynchronous done() function.
          */
         it('at least a single entry in a feed', function (done) {
-            var entriesLen = $('.feed').children().length;
+            var entriesLen = $('.feed .entry').length;
             expect(entriesLen).toBeGreaterThan(0);
             done();
         });
