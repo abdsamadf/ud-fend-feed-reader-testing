@@ -54,6 +54,7 @@ Good tests give you the ability to quickly analyze whether new code breaks an ex
 - Run `npm start`, to start the development.
 - Run `npm test`, to run the unit test.
 - Run `npm run build` to release the production to the world.
+- Run `npm run deploy` to release the gh-pages.
 
 ## Tests
 1. A test that ensures the `allFeeds` variable has been defined and that it is not empty.
