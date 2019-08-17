@@ -92,32 +92,28 @@ $(function() {
 
 
     describe('New Feed Selection', function () {
-        var oldFeed,
-            newFeed;
+        var feedAfterFirstLoad,
+            feedAfterSecondLoad;
 
         beforeEach(function (done) {
             loadFeed(0, function () {
-                // store old feed
-                oldFeed = $('.feed').html();
-                done();
-            })
-        })
-
-        beforeEach(function (done) {
-            loadFeed(1, function () {
-                // fetch new feed
-                newFeed = $('.feed').html();
-                done();
+                // get content of feed container
+                feedAfterFirstLoad = $('.feed').html();
+                loadFeed(1, function () {
+                    // get content of new feed container
+                    feedAfterSecondLoad = $('.feed').html();
+                    done();
+                })
             })
         })
 
         /* ensures when a new feed is loaded by the loadFeed
          * function that the content actually changes.
          * loadFeed() is asynchronous. Load two different RSS feeds
-         * and comparing their content.
+         * and comparing their feed container content.
          */
         it('that new feed is loaded', function (done) {
-            expect(newFeed).not.toEqual(oldFeed);
+            expect(feedAfterFirstLoad).not.toEqual(feedAfterSecondLoad);
             done();
         })
     });
