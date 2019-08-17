@@ -9,7 +9,8 @@
     "unitTest": "cross-env NODE_ENV=test gulp unitTest",
     "start": "npm run development",
     "build": "npm run dist",
-    "test": "npm run unitTest"
+    "test": "npm run unitTest",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
   "bugs": {
     "url": "https://github.com/abdsamadf/ud-fend-feed-reader-testing/issues"
   },
+  "homepage": "https://abdsamadf.github.io/feed-reader-testing",
   "readmeFilename": "README.markdown",
   "devDependencies": {
     "@babel/core": "^7.5.5",
@@ -28,6 +30,7 @@
     "browser-sync": "^2.26.7",
     "cross-env": "^5.2.0",
     "cssnano": "^4.1.10",
+    "gh-pages": "^2.1.1",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-concat": "^2.6.1",
