@@ -111,5 +111,5 @@ Please note that this project is released with a [Contributor Code of Conduct](c
 ## LICENSE
 [![MIT license](https://img.shields.io/github/license/abdsamadf/ud-fend-feed-reader-testing?style=for-the-badge)](http://opensource.org/licenses/MIT)
 
-[MIT](https://github.com/abdsamadf/ud-fend-feed-reader-testing/blob/master/LICENSE) :copyright: Abdul Samad
+[MIT](https://github.com/abdsamadf/ud-fend-feed-reader-testing/blob/master/LICENSE) :copyright: [Abdul Samad](https://github.com/abdsamadf)
 
