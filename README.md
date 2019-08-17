@@ -98,3 +98,5 @@ Good tests give you the ability to quickly analyze whether new code breaks an ex
 
 ## Contributing
 Contributions are always welcome! Please read the [contribution guidelines](CONTRIBUTING.md) first.
+
+Please note that this project is released with a [Contributor Code of Conduct](code-of-conduct.md). By participating in this project you agree to abide by its terms.
