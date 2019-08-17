@@ -22,6 +22,7 @@ This project is from my Front-End Web Developer Nanodegree Program at Udacity. T
     - [Image Optimization](#image-optimization)
     - [Unit Testing](#unit-testing)
   - [Contributing](#contributing)
+  - [License](#license)
 
 ## Get Started
 Click on this [link](https://abdsamadf.github.io/ud-fend-feed-reader-testing) to see the website or you can download or clone the project, and loading up the index.html file in your browser.
