@@ -72,7 +72,6 @@ Good tests give you the ability to quickly analyze whether new code breaks an ex
 ## Dependencies
 * [Node.js](https://nodejs.org/en/)
 * [cross-env](https://www.npmjs.com/package/cross-env)
-* [gulp-watch](https://www.npmjs.com/package/gulp-watch)
 * [gulp-sourcemaps](https://www.npmjs.com/package/gulp-sourcemaps)
 
 ### Automation Tool

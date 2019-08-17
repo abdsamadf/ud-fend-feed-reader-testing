@@ -1,6 +1,6 @@
 /* eslint-env node */
 const gulp = require('gulp');
-const watch = require('gulp-watch');
+// const watch = require('gulp-watch');
 const sourcemaps = require('gulp-sourcemaps');
 // unit testing
 const jasmine = require('gulp-jasmine');
@@ -145,7 +145,7 @@ function tests() {
     var filesForTest = ['js/app.js', 'jasmine/spec/feedreader.js'];
     return gulp
         .src(filesForTest)
-        .pipe(watch(filesForTest))
+        .pipe(gulp.watch(filesForTest))
         .pipe(jasmine())
 }
 
