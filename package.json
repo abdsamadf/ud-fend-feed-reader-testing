@@ -1,5 +1,5 @@
 {
-  "name": "feedreader-app",
+  "name": "ud-fend-feed-reader-testing",
   "version": "1.0.0",
   "description": "Udacity FEND Feed reader testing",
   "main": "app.js",
@@ -11,8 +11,13 @@
     "build": "npm run dist",
     "test": "npm run unitTest"
   },
-  "author": "Abdul Samad",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abdsamadf/ud-fend-feed-reader-testing.git"
+  },
+  "author": "Abdul Samad <abdulsamadf97@gmail.com> (https://github.com/abdsamadf)",
   "license": "MIT",
+  "readmeFilename": "README.markdown",
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
