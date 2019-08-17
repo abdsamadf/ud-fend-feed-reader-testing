@@ -47,12 +47,12 @@ $(function() {
         var bodyElement;
 
         beforeEach(function () {
-            bodyElement = $('body')[0];
+            bodyElement = $('body');
         });
 
         /* A test that ensures the menu element is hidden by default. */
         it('hidden by default', function () {
-            expect(bodyElement).toHaveClass('menu-hidden');
+            expect(bodyElement.hasClass('menu-hidden')).toBe(true);
         });
 
         /* ensures the menu changes visibility when the menu icon is clicked.
@@ -63,10 +63,10 @@ $(function() {
             var menuIcon = $('.menu-icon-link');
 
             menuIcon.trigger('click');
-            expect(bodyElement).not.toHaveClass('menu-hidden');
+            expect(bodyElement.hasClass('menu-hidden')).toBe(false);
 
             menuIcon.trigger('click');
-            expect(bodyElement).toHaveClass('menu-hidden');
+            expect(bodyElement.hasClass('menu-hidden')).toBe(true);
         });
     });
 
