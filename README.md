@@ -25,7 +25,7 @@ This project is from my Front-End Web Developer Nanodegree Program at Udacity. T
   - [License](#license)
 
 ## Get Started
-Click on this [link](https://abdsamadf.github.io/ud-fend-feed-reader-testing) to see the website or you can download or clone the project, and loading up the index.html file in your browser.
+Click on this [link](https://feed-reader-testing.netlify.com) to see the website or you can download or clone the project, and loading up the index.html file in your browser.
 
 ##  Motivation
 Testing is an essential part of the development process and many organizations practice a standard of development known as "test-driven development". This is when developers write tests first before they ever start developing their application. All the tests initially fail, and then they start writing application code to make these tests pass.
