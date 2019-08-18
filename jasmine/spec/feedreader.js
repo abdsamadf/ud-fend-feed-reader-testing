@@ -62,10 +62,10 @@ $(function() {
         it('changes visibility when the menu icon is clicked', function () {
             var menuIcon = $('.menu-icon-link');
 
-            menuIcon.trigger('click');
+            menuIcon.click();
             expect(bodyElement.hasClass('menu-hidden')).toBe(false);
 
-            menuIcon.trigger('click');
+            menuIcon.click();
             expect(bodyElement.hasClass('menu-hidden')).toBe(true);
         });
     });
